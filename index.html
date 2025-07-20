@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>padil oy oy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body
+  style="background-image: url(https://media.istockphoto.com/id/1366046741/vector/abstract-light-rays-effect-background.jpg?s=612x612&w=0&k=20&c=jkznESLbXP5ANUEWsntFgBENhTc32YXQeeHSw96kAAc=);"
+  class="flex justify-center h-screen items-center"
+>
+  <div
+    class="bg-black border px-10 py-7 border-gray-500 shadow-lg rounded-xl animate__animated animate__backInDown m-8 w-80 text-center text-white"
+    id="kartu"
+  >
+    <h1 class="text-2xl text-blue-600 font-bold">HAPPY BIRTHDAY</h1>
+    <h1 class="text-6xl text-red-600 font-bold animate__animated animate__pulse animate__infinite">FADHIL</h1>
+    <button
+      class="px-16 py-1 bg-white text-black rounded mt-7 font-bold hover:bg-gray-200 transition ease-in w-full animate__animated animate__heartBeat animate__delay-1s"
+      onclick="ubahkartu()"
+    >
+      KLIK DISINI
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  <script>
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 1.0 },
+    });
+
+    let kartu = document.getElementById("kartu");
+
+    function ubahkartu() {
+      kartu.innerHTML = `
+        <h1 class="font-semibold animate__animated animate__zoomIn">Jangan takut bertambah umur, takutlah kalau nggak bertambah hebat. Happy birthday, semangat terus!</h1>
+        <button class="px-16 py-1 bg-white text-black rounded mt-7 font-bold hover:bg-gray-300 transition ease-in w-full animate__animated animate__pulse animate__infinite" onclick="lanjut()">LANJUT</button>
+      `;
+    }
+
+    function lanjut() {
+      kartu.innerHTML = `
+        
+        <img src="IMG_0075.JPG" alt="Foto Saya" width="300">
+        <button class="px-16 py-1 bg-white text-black rounded mt-7 font-bold hover:bg-gray-300 transition ease-in w-full animate__animated animate__pulse animate__infinite" onclick="refresh()">KEMBALI</button>
+      `;
+    }
+     function refresh() {
+      location.reload();
+    }
+
+  </script>
+</body>
+</html>
